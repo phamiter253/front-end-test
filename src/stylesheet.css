@@ -1,0 +1,142 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.hero-image {
+    background-image: url("assets/img/hero.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-title1 {
+    color: transparent;
+    font-size: 4.5vw;
+    letter-spacing: .2vw;
+    -webkit-text-stroke-width: .1vw;
+    -webkit-text-stroke-color: white;
+}
+
+.hero-title2 {
+    color: white;
+    font-size: 4vw;
+    letter-spacing: .4vw;
+    line-height: .9;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    top: 4%;
+    left: 11%;
+    z-index: 100;
+}
+
+.button1 {
+    background-color: rgb(152, 92, 208);
+    font-weight: 600;
+    padding: 15px;
+    color: white;
+    font-size: .8rem;
+    text-align: center;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.button1:hover {
+    background-color: rgb(166, 115, 214);
+}
+
+.button2 {
+    background-color: orange;
+    font-weight: 600;
+    padding: 15px;
+    color: white;
+    font-size: .8rem;
+    text-align: center;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.button2:hover {
+    background-color: rgb(255, 184, 52);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.left-text {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.right-text {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+}
+
+.grid {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    grid-row: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 6vh;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
+}
+
+.grid-text {
+    font-size: .5rem;
+    font-weight: 500;
+}
+
+.star {
+    color: orange;
+    width: 5%;
+    height: auto;
+    padding-right: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    gap: 1vh;
+    justify-items: center;
+    align-items: center;
+}

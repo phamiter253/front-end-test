@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c54a214f.css",
+    "main.js": "/static/js/main.d2b72085.js",
+    "static/js/787.b57b9135.chunk.js": "/static/js/787.b57b9135.chunk.js",
+    "static/media/hero.jpg": "/static/media/hero.9a710d871f2c3c7db665.jpg",
+    "static/media/banner-2.jpg": "/static/media/banner-2.94ddf3c2924534d8eb64.jpg",
+    "static/media/banner-1.jpg": "/static/media/banner-1.4638a869b9ed930f0ccd.jpg",
+    "static/media/img-1.jpg": "/static/media/img-1.7a73ec856ab331ef3a58.jpg",
+    "static/media/home-hygiene.svg": "/static/media/home-hygiene.289cbb0a8b82f4fc2a34cfd491f6a9f4.svg",
+    "static/media/home-retention.svg": "/static/media/home-retention.78e8e24ef2c1f2dfebf1d02ba512652f.svg",
+    "static/media/home-expertise.svg": "/static/media/home-expertise.431e1bc5f60a7bc5504ffe576e0ffc78.svg",
+    "static/media/logo-white.svg": "/static/media/logo-white.daed702e7dceac6518ac7c3c9c4633f3.svg",
+    "static/media/home-lab.svg": "/static/media/home-lab.33fec398ac5cad0bdad2540870a20374.svg",
+    "index.html": "/index.html",
+    "main.c54a214f.css.map": "/static/css/main.c54a214f.css.map",
+    "main.d2b72085.js.map": "/static/js/main.d2b72085.js.map",
+    "787.b57b9135.chunk.js.map": "/static/js/787.b57b9135.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c54a214f.css",
+    "static/js/main.d2b72085.js"
+  ]
+}

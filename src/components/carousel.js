@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,6 +6,7 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 
 const Carousel = ({children}) => {
     const [current, setCurrent] = useState(0);
+    const [paused, setPaused] = useState(false);
     const length = 3;
     
     const updateIndex = (newIndex) => {
@@ -15,10 +16,27 @@ const Carousel = ({children}) => {
           newIndex = 0;
         }
         setCurrent(newIndex);
-      };
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          if (!paused) {
+            updateIndex(current + 1);
+          }
+        }, 5000);
+    
+        return () => {
+          if (interval) {
+            clearInterval(interval);
+          }
+        };
+      });
 
     return (
-        <div className="carousel">
+        <div className="carousel"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+        >
             <div className="left-wrapper">
                 <FontAwesomeIcon 
                     icon={faChevronLeft} 
@@ -40,6 +58,19 @@ const Carousel = ({children}) => {
             <div className="inner" style={{transform: `translateX(-${current * 100}%)`}}>
                 {React.Children.map(children, (child, index) => {
                     return React.cloneElement(child, {width: "100%"})
+                })}
+            </div>
+            <div style={{paddingLeft: "35%"}}>
+                {React.Children.map(children, (child, index) => {
+                    return (
+                        <button
+                            className={`${index === current ? "active" : ""}`}
+                            onClick={() => {
+                                updateIndex(index);
+                            }}
+                        >
+                        </button>
+                    );
                 })}
             </div>
         </div>

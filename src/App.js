@@ -1,19 +1,21 @@
+// Import Style Sheets 
 import "./stylesheet.css";
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
+// Import Images
 import logo from "./assets/logo/logo-white.svg";
-
 import img1 from "./assets/img/img-1.jpg";
-
 import banner1 from "./assets/img/banner-1.jpg";
 import banner2 from "./assets/img/banner-2.jpg";
-
 import icon1 from "./assets/icons/home-expertise.svg";
 import icon2 from "./assets/icons/home-hygiene.svg";
 import icon3 from "./assets/icons/home-lab.svg";
 import icon4 from "./assets/icons/home-retention.svg";
+
+// Import Component
+import Carousel from "./components/carousel";
 
 
 
@@ -40,8 +42,8 @@ function App() {
 
       {/* Section with Small Image */}
       <div className="container">
-        <div style={{ padding: "7vw 5vw 2vw 13vw" }}>
-          <h1 style={{ fontSize: "2vw", color: "purple" }}>LOREM IPSUM</h1>
+        <div style={{ padding: "6vw 5vw 2vw 13vw" }}>
+          <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
           <p>
             Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
             magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
@@ -50,7 +52,7 @@ function App() {
             tellus suspendisse.
           </p>
           <a href="/">
-            <h3 style={{ color: "purple" }}>&gt; Lorem Ipsum</h3>
+            <h3 style={{ color: "#592c69" }}>&gt; Lorem Ipsum</h3>
           </a>
         </div>
 
@@ -62,7 +64,7 @@ function App() {
       <div className="banner">
         <img src={banner1} alt="banner1" />
         <div className="left-text">
-          <h1 style={{ fontSize: "2vw", color: "purple" }}>LOREM IPSUM</h1>
+          <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
           <button className="button2" onClick={handleClick}>
             BUTTON BUTTON
           </button>
@@ -73,7 +75,7 @@ function App() {
       {/* Section with Four Icons */}
       <div className="container">
         <div style={{ padding: "8vw 5vw 6vw 13vw" }}>
-          <h1 style={{ fontSize: "2vw" }}>
+          <h1 style={{ fontSize: "3vw" }}>
             LOREM IPSUM
             <br />
             DOLOR SIT AMET
@@ -84,13 +86,13 @@ function App() {
             ut pede ut ante, in viverra eros dictum nisl ligula.
           </p>
           <a href="/">
-            <h3 style={{ color: "purple" }}>&gt; Lorem Ipsum</h3>
+            <h3 style={{ color: "#592c69" }}>&gt; Lorem Ipsum</h3>
           </a>
         </div>
         <div>
           <div className="grid">
             <div>
-              <svg width="50%" height="50%" viewBox="0 0 60 60">
+              <svg viewBox="0 0 60 60">
                 <defs>
                   <clipPath id="circleView">
                     <circle
@@ -126,7 +128,7 @@ function App() {
             </div>
 
             <div>
-              <svg width="50%" height="50%" viewBox="0 0 60 60">
+              <svg viewBox="0 0 60 60">
                 <defs>
                   <clipPath id="circleView">
                     <circle
@@ -162,7 +164,7 @@ function App() {
             </div>
 
             <div>
-              <svg width="50%" height="50%" viewBox="0 0 60 60">
+              <svg viewBox="0 0 60 60">
                 <defs>
                   <clipPath id="circleView">
                     <circle
@@ -198,7 +200,7 @@ function App() {
             </div>
 
             <div>
-              <svg width="50%" height="50%" viewBox="0 0 60 60">
+              <svg viewBox="0 0 60 60">
                 <defs>
                   <clipPath id="circleView">
                     <circle
@@ -241,7 +243,7 @@ function App() {
       <div className="banner">
         <img src={banner2} alt="banner2" />
         <div className="right-text" style={{ paddingRight: "2vw" }}>
-          <h1 style={{ fontSize: "2vw", color: "purple" }}>LOREM IPSUM</h1>
+          <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
           <p>
             Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
             magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
@@ -257,7 +259,7 @@ function App() {
       {/* Section with Carousel */}
       <div className="container">
         <div style={{ padding: "10vw 5vw 6vw 13vw" }}>
-          <h1 style={{ fontSize: "2vw", marginBottom: "0.5vw" }}>
+          <h1 style={{ fontSize: "3vw", marginBottom: "0.5vw" }}>
             LOREM IPSUM
             <br />
             DOLOR SIT AMET
@@ -268,9 +270,48 @@ function App() {
           <FontAwesomeIcon icon={faStar} className="star" />
           <FontAwesomeIcon icon={faStar} className="star" />
         </div>
-        <img src={img1} alt="mountain" width="100%" />
+
+        <Carousel>
+          <div className="carousel-item">
+            <p>
+              <span style={{fontSize: "1.4rem", fontWeight: "bold", color: "#592c69", paddingLeft: "25%"}}>John Doe 08/08/2019</span>
+              <br/>
+              <br/>
+              Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum 
+              dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in.
+            </p>
+          </div>
+          <div className="carousel-item">
+            <p>
+              Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum 
+              dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in.
+            </p>
+          </div>
+          <div className="carousel-item">
+            <p>
+              Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum 
+              dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
+              ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
+              magna est sociis, neque in.
+            </p>
+          </div>
+        </Carousel>
+        
       </div>
-      
+
 
       {/* Footer */}
       <h2 style={{fontSize: "1vw"}}>Follow Us:</h2>
@@ -281,7 +322,7 @@ function App() {
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
-            width="4vw"
+            width="3vw"
           >
             <title>instagram</title>
             <path
@@ -296,7 +337,7 @@ function App() {
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
-            width="4vw"
+            width="3vw"
           >
             <title>facebook</title>
             <path

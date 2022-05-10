@@ -122,6 +122,17 @@ body {
     font-weight: 500;
 }
 
+.grid svg{
+    width: 50%;
+    height: 50%;
+    transition: width .5s, height .5s;
+}
+
+.grid svg:hover {
+    width: 53%;
+    height: 53%;
+}
+
 .star {
     color: orange;
     width: 5%;
@@ -131,6 +142,45 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+   
+    padding: 15% 30% 0% 10% ;
+}
+
+.carousel p {
+    white-space: normal;
+    
+}
+
+.rightArrow {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    height: 3vh;
+    color: #592c69;
+}
+
+.leftArrow {
+    position: absolute;
+    top: 50%;
+    height: 3vh;
+    color: #592c69;
 }
 
 .footer {

@@ -274,7 +274,7 @@ function App() {
         <Carousel>
           <div className="carousel-item">
             <p>
-              <span style={{fontSize: "1.4rem", fontWeight: "bold", color: "#592c69", paddingLeft: "25%"}}>John Doe 08/08/2019</span>
+              <span className="heading">John Doe 08/08/2019</span>
               <br/>
               <br/>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
@@ -288,6 +288,9 @@ function App() {
           </div>
           <div className="carousel-item">
             <p>
+              <span className="heading">Jane Doe 09/08/2019</span>
+              <br/>
+              <br/>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
               magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
               ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum 
@@ -299,6 +302,9 @@ function App() {
           </div>
           <div className="carousel-item">
             <p>
+              <span className="heading">John Doe 10/08/2019</span>
+              <br/>
+              <br/>
               Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
               magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,
               ut pede ut ante, in viverra eros dictum nisl ligula. Lorem ipsum 

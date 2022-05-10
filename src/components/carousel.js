@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
-
-//credit: https://www.newline.co/@andreeamaco/react-carousel-building-the-component-from-scratch-vs-using-a-library--7da468d4
+//credit: https://medium.com/tinyso/how-to-create-the-responsive-and-swipeable-carousel-slider-component-in-react-99f433364aa0
 
 const Carousel = ({children}) => {
     const [current, setCurrent] = useState(0);
@@ -20,21 +19,24 @@ const Carousel = ({children}) => {
 
     return (
         <div className="carousel">
-            <FontAwesomeIcon 
-                icon={faChevronLeft} 
-                className="leftArrow"
-                onClick={() => {
-                    updateIndex(current - 1);
-                }}
-            />
-            <FontAwesomeIcon 
-                icon={faChevronRight} 
-                className="rightArrow"
-                onClick={() => {
-                    updateIndex(current + 1);
-                }}
-            />
-               
+            <div className="left-wrapper">
+                <FontAwesomeIcon 
+                    icon={faChevronLeft} 
+                    className="leftArrow"
+                    type="button" 
+                    onClick={() => {updateIndex(current - 1);}}
+                />
+            </div>
+            
+            <div className="right-wrapper">
+                <FontAwesomeIcon 
+                    className="rightArrow"
+                    icon={faChevronRight}
+                    type="button" 
+                    onClick={() => {updateIndex(current + 1);}}
+                />
+            </div>
+            
             <div className="inner" style={{transform: `translateX(-${current * 100}%)`}}>
                 {React.Children.map(children, (child, index) => {
                     return React.cloneElement(child, {width: "100%"})

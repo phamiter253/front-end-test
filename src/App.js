@@ -152,7 +152,7 @@ function App() {
             tellus suspendisse.
           </p>
           <a href="/">
-            <h3 style={{ color: "#592c69" }}>&gt; Lorem Ipsum</h3>
+            <h3 style={{ color: "#592c69", fontSize: "2vh" }}>&gt; Lorem Ipsum</h3>
           </a>
         </div>
 
@@ -186,7 +186,7 @@ function App() {
             ut pede ut ante, in viverra eros dictum nisl ligula.
           </p>
           <a href="/">
-            <h3 style={{ color: "#592c69" }}>&gt; Lorem Ipsum</h3>
+            <h3 style={{ color: "#592c69", fontSize: "2vh" }}>&gt; Lorem Ipsum</h3>
           </a>
         </div>
         <div>
@@ -221,7 +221,7 @@ function App() {
                   stroke="#9964aa"
                   strokeWidth="0.5"
                 ></circle>
-                <text x="12" y="60" className="grid-text">
+                <text x="10" y="60" className="grid-text">
                   LOREM
                 </text>
               </svg>
@@ -329,7 +329,7 @@ function App() {
                   stroke="#9964aa"
                   strokeWidth="0.5"
                 ></circle>
-                <text x="12" y="60" className="grid-text">
+                <text x="10" y="60" className="grid-text">
                   LOREM
                 </text>
               </svg>
@@ -343,7 +343,7 @@ function App() {
       <div className="banner" id="banner2">
         <img src={banner2} alt="banner2" />
         <div className="right-text" style={{ paddingRight: "2vw" }}>
-          <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
+          <h1 style={{ fontSize: "3vw", color: "#592c69", paddingTop: 0 }}>LOREM IPSUM</h1>
           <p>
             Lorem ipsum dolor sit amet, et felis integer. Cras ac, duis nisl
             magna est sociis, neque in odio vel, sit lobortis erat. Fugit quam,

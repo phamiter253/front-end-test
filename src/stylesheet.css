@@ -38,6 +38,10 @@ body {
     display: block;
 }
 
+p {
+    font-size: 1.6vh;
+}
+
 .logo {
     position: absolute;
     top: 4%;
@@ -124,7 +128,7 @@ body {
 }
 
 .grid-text {
-    font-size: .5rem;
+    font-size: .9vh;
     font-weight: 500;
 }
 

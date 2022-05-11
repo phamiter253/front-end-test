@@ -33,7 +33,7 @@
 
   2. Any struggles you faced when developing with technology you chose
 
-  I had issues with react-bootstrap so I had to change my strategy completely. I also tried setting up Tailwind but that wasn't working either. Making components, text, and margin/padding responsive while maintaining the layout design was another challenge. I also wanted to create a parallax effect with the banner images but I couldn't implement it the way I wanted.
+  I had issues with react-bootstrap so I had to change my strategy completely. I also tried setting up Tailwind but that wasn't working either. Making the carousel took the most time and effort. Making components, text, and margin/padding responsive while maintaining the layout design was another challenge. I also wanted to create a parallax effect with the banner images but I couldn't implement it the way I wanted.
 
   3. What you enjoyed the most and why
 

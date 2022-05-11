@@ -29,14 +29,14 @@
 
   1. What you technologies you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)
 
-  For the test, I used React and made my own stylesheet. I was having issues with react-bootstrap so I just styled everything and implemented the carousel from scratch. I also used Green Sock for the animations.
+    For the test, I used React and made my own stylesheet. I was having issues with react-bootstrap so I just styled everything and implemented the carousel from scratch. I also used Green Sock for the animations.
 
   2. Any struggles you faced when developing with technology you chose
 
-    I had uses with react-bootstrap so I had to change my strategy completely. I also tried setting up Tailwind but that wasn't working either. Making components, text, and margin/padding responsive while maintaining the layout design wasn't easy. 
+    I had issues with react-bootstrap so I had to change my strategy completely. I also tried setting up Tailwind but that wasn't working either. Making components, text, and margin/padding responsive while maintaining the layout design was another challenge. I also wanted to create a parallax effect with the banner images but I couldn't implement it the way I wanted.
 
   3. What you enjoyed the most and why
 
-  I liked depending on my own stylesheet, I rarely never use bootstrap for components so it was an interesting challenge. I also liked using Green Sock for the animations. It was pretty user friendly and simple. I wanted to create a parallax effect with the banner images but I couldn't implement it the way I wanted.
+    I liked depending on my own stylesheet, I rarely never use bootstrap for components so it was an interesting challenge. I also liked using Green Sock for the animations. It was pretty user friendly and simple.
 
 If you have any questions please feel free to email me (Matt) at matt.sprague@roostergrin.com

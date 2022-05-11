@@ -38,5 +38,3 @@
   3. What you enjoyed the most and why
 
   I liked depending on my own stylesheet, I rarely never use bootstrap for components so it was an interesting challenge. I also liked using Green Sock for the animations. It was pretty user friendly and simple.
-
-If you have any questions please feel free to email me (Matt) at matt.sprague@roostergrin.com

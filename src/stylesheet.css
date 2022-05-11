@@ -5,6 +5,7 @@
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
 }
 .hero-image {
     background-image: url("assets/img/hero.jpg");
@@ -42,6 +43,7 @@ body {
     top: 4%;
     left: 11%;
     z-index: 100;
+    opacity: 0;
 }
 
 .button1 {
@@ -52,6 +54,7 @@ body {
     font-size: .8rem;
     text-align: center;
     border: none;
+    opacity: 0;
     transition-duration: 0.4s;
 }
 
@@ -82,11 +85,14 @@ body {
 
 .banner {
     position: relative;
+    overflow: hidden;
 }
 
 .banner img{
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 120%;
+    
 }
 
 .left-text {

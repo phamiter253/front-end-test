@@ -1,4 +1,8 @@
 // Import Style Sheets 
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import "./stylesheet.css";
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,19 +24,115 @@ import Carousel from "./components/carousel";
 
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger);
   const handleClick = () => {
     console.log("Clicked Button")
   }
+   
+  useEffect(() => {
+    var tl = gsap.timeline();
+    tl.set([".logo", ".button1"], {opacity: 0})
+    tl.set("#secondAnime", {x: 200, opacity: 0})
+    tl.set("#firstAnime",{ y:-50 , opacity:0 , ease: "elastic.easeOut" })
+    .to("#firstAnime",1,{ y:0 , opacity:1 , ease: "elastic.easeIn" } ,'+=1')
+    tl.to("#secondAnime",1.5,{x:0, opacity: 1, ease: "elastic.out(1, 0.3)"})
+    tl.to([".logo", ".button1"],0.5,{ opacity: 1 }, "+=1")
+
+    gsap.fromTo(
+      "#climb",
+      {
+        opacity: 0,
+        x: 40
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: "#container1",
+          scrub: true
+        }
+      }
+    )
+
+    gsap.fromTo(
+      ".left-text",
+      {
+        opacity: 0,
+        x: 40
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: "#banner1",
+          scrub: true
+        }
+      }
+    )
+
+    gsap.fromTo(
+      ".grid svg",
+      {
+        opacity: 0,
+        scale: 1.5
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        scrollTrigger: {
+          trigger: ".grid",
+          scrub: true
+        }
+      }
+    )
+
+    gsap.fromTo(
+      ".right-text",
+      {
+        opacity: 0,
+        x: -60
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: "#banner2",
+          scrub: true
+        }
+      }
+    )
+
+    gsap.fromTo(
+      "#container3",
+      {
+        opacity: 0.5,
+      },
+      {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#container3",
+          scrub: true
+        }
+      }
+    )
+
+    
+    
+  }, []);
+
   return (
     <div className="App">
       {/* Hero */}
       <div className="hero-image">
         <img className="logo" src={logo} alt="white-logo" width="250vw" />
         <div className="hero-text">
-          <h1 className="hero-title1">
+          <h1 className="hero-title1" >
+            <div id="firstAnime">
             WELCOME TO
-            <br />
+            </div>
+            <div id="secondAnime">
             <span className="hero-title2">Rooster Grin</span>
+            </div>
           </h1>
           <button className="button1" onClick={handleClick}>
             BUTTON BUTTON
@@ -41,7 +141,7 @@ function App() {
       </div>
 
       {/* Section with Small Image */}
-      <div className="container">
+      <div className="container" id="container1">
         <div style={{ padding: "6vw 5vw 2vw 13vw" }}>
           <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
           <p>
@@ -56,12 +156,12 @@ function App() {
           </a>
         </div>
 
-        <img src={img1} alt="mountain" width="100%" height="100%" />
+        <img src={img1} id="climb" alt="mountain" width="100%" height="100%" />
       </div>
 
 
       {/* First Large Image Banner */}
-      <div className="banner">
+      <div className="banner" id="banner1">
         <img src={banner1} alt="banner1" />
         <div className="left-text">
           <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
@@ -73,7 +173,7 @@ function App() {
 
 
       {/* Section with Four Icons */}
-      <div className="container">
+      <div className="container" id="container2">
         <div style={{ padding: "8vw 5vw 6vw 13vw" }}>
           <h1 style={{ fontSize: "3vw" }}>
             LOREM IPSUM
@@ -240,7 +340,7 @@ function App() {
 
 
       {/* Second Large Image Banner */}
-      <div className="banner">
+      <div className="banner" id="banner2">
         <img src={banner2} alt="banner2" />
         <div className="right-text" style={{ paddingRight: "2vw" }}>
           <h1 style={{ fontSize: "3vw", color: "#592c69" }}>LOREM IPSUM</h1>
@@ -257,7 +357,7 @@ function App() {
 
 
       {/* Section with Carousel */}
-      <div className="container">
+      <div className="container" id="container3">
         <div style={{ padding: "10vw 5vw 6vw 13vw" }}>
           <h1 style={{ fontSize: "3vw", marginBottom: "0.5vw" }}>
             LOREM IPSUM

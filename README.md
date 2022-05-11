@@ -22,7 +22,7 @@
 
 ### Bonus (optional) Features:
 - [X] Use of dev server
-- [ ] Front end framework
+- [X] Front end framework
 - [ ] Dynamic backend from a CMS
 
 ### *Please also submit a small write up discussing (leave answers to a sentence or two):*
